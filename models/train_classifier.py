@@ -85,7 +85,7 @@ def build_model():
 
     simple_pipeline_cv = GridSearchCV(pipeline1, param_grid=parameters_grid, scoring='f1_micro', n_jobs=-1)
 
-    return cv
+    return simple_pipeline_cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
