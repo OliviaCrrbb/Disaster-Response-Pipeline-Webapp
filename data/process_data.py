@@ -8,15 +8,15 @@ import sys
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine
-CATEGORIES_FILENAME = 'disaster_categories.csv'
-MESSAGES_FILENAME = 'disaster_messages.csv'
+CATEGORIES_FILENAME = 'categories.csv'
+MESSAGES_FILENAME = 'messages.csv'
 DATABASE_FILENAME = '../db.sqlite3'
 TABLE_NAME = 'disaster_message'
 
 def load_data(messages_filepath, categories_filepath):
-    messages = pd.read_csv("disaster_messages.csv")
+    messages = pd.read_csv("messages.csv")
     #messages.head
-    categories = pd.read_csv("disaster_categories.csv")
+    categories = pd.read_csv("categories.csv")
     df = pd.merge(messages, categories, on = 'id')
     #df.head()
     return df
