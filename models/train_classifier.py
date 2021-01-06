@@ -32,6 +32,9 @@ from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.base import BaseEstimator,TransformerMixin
 from sklearn.metrics import classification_report, accuracy_score
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 
 
@@ -46,18 +49,17 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
-    def tokenize(text,url_place_holder_string="urlplaceholder"):
-        url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+' # Replace all urls with a urlplaceholder string
-        # Extract all the urls from the provided text 
-        detected_urls = re.findall(url_regex, text)
-        for detected_url in detected_urls:
-            text = text.replace(detected_url, url_place_holder_string)
-            tokens = nltk.word_tokenize(text)
-            lemmatizer = nltk.WordNetLemmatizer()
-            clean_tokens = [lemmatizer.lemmatize(w).lower().strip() for w in tokens]
-        return clean_tokens
-            
-
+    url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    detected_urls = re.findall(url_regex, text)
+    for detected_url in detected_urls:
+        text = text.replace(detected_url, 'url_place_holder_string')
+    tokens = nltk.word_tokenize(text)
+    lemmatizer = nltk.WordNetLemmatizer()
+    
+    clean_tokens = [lemmatizer.lemmatize(w).lower().strip()
+                    for w in tokens]
+    return clean_tokens
+    
 def build_model():
     pipeline1 = Pipeline([
         ('features', FeatureUnion([
