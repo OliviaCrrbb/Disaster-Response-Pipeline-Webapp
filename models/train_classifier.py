@@ -4,6 +4,12 @@
 # In[ ]:
 
 
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 import sys
 import sys
 import os
@@ -96,9 +102,11 @@ def evaluate_model(model, X_test, Y_test, category_names):
     
     # Calculate the accuracy for each of them.
     for i in range(len(category_names)):
-    print('Category: {} '.format(category_names[i]))
-    print(classification_report(y_test.iloc[:, i].values, y_pred[:, i]))
-    print('Accuracy {}\n\n'.format(accuracy_score(y_test.iloc[:, i].values, y_pred[:, i])))
+        print('Category: {} '.format(category_names[i]))
+        print(classification_report(y_test.iloc[:, i].values, y_pred[:, i]))
+        print('Accuracy {}\n\n'.format(accuracy_score(y_test.iloc[:, i].values, y_pred[:, i])))
+        
+    
     
 
 
