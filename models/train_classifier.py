@@ -41,28 +41,23 @@ def load_data(database_filepath):
 
 def tokenize(text):
     def tokenize(text,url_place_holder_string="urlplaceholder"):
-   
-    # Replace all urls with a urlplaceholder string
-    url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
-    
-    # Extract all the urls from the provided text 
-    detected_urls = re.findall(url_regex, text)
-    
-    # Replace url with a url placeholder string
+        url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+' # Replace all urls with a urlplaceholder string
+        # Extract all the urls from the provided text 
+        detected_urls = re.findall(url_regex, text)
+         # Replace url with a url placeholder string
     for detected_url in detected_urls:
         text = text.replace(detected_url, url_place_holder_string)
+        
 
     # Extract the word tokens from the provided text
     tokens = nltk.word_tokenize(text)
-    
     #Lemmanitizer to remove inflectional and derivationally related forms of a word
     lemmatizer = nltk.WordNetLemmatizer()
 
     # List of clean tokens
     clean_tokens = [lemmatizer.lemmatize(w).lower().strip() for w in tokens]
     return clean_tokens
-    
-
+        
 
 def build_model():
     pipeline1 = Pipeline([
