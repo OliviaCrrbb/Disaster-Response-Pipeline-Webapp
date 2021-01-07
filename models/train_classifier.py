@@ -41,7 +41,7 @@ from nltk.stem import WordNetLemmatizer
 
 def load_data(database_filepath):
     engine = create_engine('sqlite:///Messages.db')
-    df = pd.read_sql_table('Disasters1', engine)
+    df = pd.read_sql_table('Disasters6', engine)
     X = df['message']
     Y = df.iloc[:, 4:]
     category_names = list(df.columns[4:])
@@ -93,7 +93,8 @@ def evaluate_model(model, X_test, Y_test, category_names):
     output:
         scores
     """
-    y_pred = pipeline_fitted.predict(X_test)
+    
+    y_pred = model.predict(X_test)
     
     # Calculate the accuracy for each of them.
     for i in range(len(category_names)):
