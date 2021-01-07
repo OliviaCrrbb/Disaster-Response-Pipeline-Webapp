@@ -8,13 +8,16 @@ import sys
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine
+
 CATEGORIES_FILENAME = 'categories.csv'
 MESSAGES_FILENAME = 'messages.csv'
 DATABASE_FILENAME = '../db.sqlite3'
 TABLE_NAME = 'disaster_message'
 
+
+
 def load_data(messages_filepath, categories_filepath):
-    messages = pd.read_csv("messages.csv")
+    messages = pd.read_csv('messages.csv')
     #messages.head
     categories = pd.read_csv("categories.csv")
     df = pd.merge(messages, categories, on = 'id')
@@ -40,11 +43,14 @@ def clean_data(df):
     df = pd.concat([df, categories], axis = 1)
     # drop duplicates
     df = df.drop_duplicates()
+    df['related'].replace([2], [1], inplace=True)
     return df
     
+
+
 def save_data(df, database_filename):
     engine = create_engine('sqlite:///Messages.db')
-    df.to_sql('Disasters1', engine, index=False)
+    df.to_sql('Disasters6', engine, index=False)
 
     
 def main():
@@ -75,6 +81,7 @@ def main():
 
 if __name__ == '__main__':
     main()  
+        
         
     
         
