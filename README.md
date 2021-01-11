@@ -46,8 +46,8 @@ The web application:
 ![Screen Shot 2021-01-11 at 17.03.14.png](https://www.dropbox.com/s/w3izu4fd9r1t4qi/Screen%20Shot%202021-01-11%20at%2017.03.14.png?dl=0&raw=1)
 
 
-When a disaster message is submitted, the Classify Message button is clicked, the app shows how the message is classified by highlighting the categories in green!
-For the suggested message "we are more than 50 people on the street. Please help us find tent and food", we get the following categories: 
+When a disaster message is submitted and the Classify Message button is clicked, the app shows how the message is classified by highlighting the categories in green. 
+For the suggested message "we are more than 50 people on the street. Please help us find tent and food" we get the following categories: 
 
 
 ![Screen Shot 2021-01-11 at 16.15.41.png](https://www.dropbox.com/s/jhotm6a61bj5etp/Screen%20Shot%202021-01-11%20at%2016.15.41.png?dl=0&raw=1)![Screen Shot 2021-01-11 at 16.16.00.png](https://www.dropbox.com/s/fnqbn07ojwuqaoy/Screen%20Shot%202021-01-11%20at%2016.16.00.png?dl=0&raw=1)![Screen Shot 2021-01-11 at 16.16.10.png](https://www.dropbox.com/s/odcgtehvix2vugx/Screen%20Shot%202021-01-11%20at%2016.16.10.png?dl=0&raw=1)
