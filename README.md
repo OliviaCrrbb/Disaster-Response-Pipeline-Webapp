@@ -55,4 +55,4 @@ For the suggested message "we are more than 50 people on the street. Please help
 
 
 ## Licensing and Acknowledgements
-Thank you Udacity for the course and [Figure Eight](https://appen.com/resources/datasets/) for the dataset.
+Thanks Udacity for the course and [Figure Eight](https://appen.com/resources/datasets/) for the dataset.
