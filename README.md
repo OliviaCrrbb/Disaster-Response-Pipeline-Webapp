@@ -53,7 +53,6 @@ For the suggested message "we are more than 50 people on the street. Please help
 ![Screen Shot 2021-01-11 at 16.15.41.png](https://www.dropbox.com/s/jhotm6a61bj5etp/Screen%20Shot%202021-01-11%20at%2016.15.41.png?dl=0&raw=1)![Screen Shot 2021-01-11 at 16.16.00.png](https://www.dropbox.com/s/fnqbn07ojwuqaoy/Screen%20Shot%202021-01-11%20at%2016.16.00.png?dl=0&raw=1)![Screen Shot 2021-01-11 at 16.16.10.png](https://www.dropbox.com/s/odcgtehvix2vugx/Screen%20Shot%202021-01-11%20at%2016.16.10.png?dl=0&raw=1)
 
 
-## Deployment
 
 ## Licensing and Acknowledgements
 Thank you Udacity for the course and [Figure Eight](https://appen.com/resources/datasets/) for the dataset.
