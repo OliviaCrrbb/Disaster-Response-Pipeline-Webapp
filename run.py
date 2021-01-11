@@ -26,8 +26,8 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///../data/YourDatabaseName.db')
-df = pd.read_sql_table('YourTableName', engine)
+engine = create_engine('sqlite:///Messages.db')
+df = pd.read_sql_table('Disaster10', engine)
 
 # load model
 model = joblib.load("../models/classifier.pkl")
