@@ -40,8 +40,8 @@ from nltk.stem import WordNetLemmatizer
 
 
 def load_data(database_filepath):
-    engine = create_engine('sqlite:///Messages.db')
-    df = pd.read_sql_table('Disasters6', engine)
+    engine = create_engine('sqlite:///DisasterResponse.db')
+    df = pd.read_sql_table('Disasters', engine)
     X = df['message']
     Y = df.iloc[:, 4:]
     category_names = list(df.columns[4:])
@@ -107,7 +107,8 @@ def save_model(model, model_filepath):
     """
     Save model to a pickle file
     """
-    pickle.dump(cv, open('model.pkl', 'wb'))
+    pickle.dump(model, open('model.pkl', 'wb'))
+    
 
 
 def main():
