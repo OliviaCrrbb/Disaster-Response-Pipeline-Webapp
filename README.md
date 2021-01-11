@@ -40,7 +40,9 @@ The dataset is provided by Figure Eight and consists of:
 
 ## Results 
 
-The web application 
+The web application:
+
+
 ![Screen Shot 2021-01-11 at 17.03.14.png](https://www.dropbox.com/s/w3izu4fd9r1t4qi/Screen%20Shot%202021-01-11%20at%2017.03.14.png?dl=0&raw=1)
 
 
