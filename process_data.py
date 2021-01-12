@@ -17,9 +17,9 @@ TABLE_NAME = 'disaster_message'
 
 
 def load_data(messages_filepath, categories_filepath):
-    messages = pd.read_csv('messages.csv')
+    messages = pd.read_csv(messages_filepath)
     #messages.head
-    categories = pd.read_csv("categories.csv")
+    categories = pd.read_csv(categories_filepath)
     df = pd.merge(messages, categories, on = 'id')
     #df.head()
     return df
